@@ -5,7 +5,7 @@ const app = express()
 const mongoose = require('mongoose')
 
 //connect DB
-mongoose.connect('mongodb://localhost/crud-mongo')
+mongoose.connect('mongodb://localhost/crud-mongo', {useNewUrlParser: true})
         .then(db => console.log('Db conectada'))
         .catch(err => console.log(err))
 
