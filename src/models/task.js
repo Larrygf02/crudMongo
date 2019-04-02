@@ -8,7 +8,8 @@ const TaskSchema = new Schema({
     status: {
         type: Boolean,
         default: false
-    }
+    },
+    date: [Date]
 })
 
 module.exports = mongoose.model('tasks', TaskSchema);

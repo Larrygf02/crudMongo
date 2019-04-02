@@ -14,6 +14,9 @@
                             <div class="form-group">
                                 <textarea name="description" cols="80" placeholder="Inserta una descripcion" class="form-control"></textarea>
                             </div>
+                            <div class="form-group">
+                               <input name="date" type="date" class="form-control">
+                            </div>
                             <button type="submit" class="btn btn-primary btn-block">Agregar</button>
                         </form>
                     </div>
@@ -27,6 +30,7 @@
                             <th>N°</th>
                             <th>Titulo</th>
                             <th>Descripcion</th>
+                            <th>Fecha</th>
                             <th>Operacion</th>
                         </tr>
                     </thead>
@@ -36,6 +40,7 @@
                                 <td><%= i+1 %></td>
                                 <td><%= tasks[i].title %></td>
                                 <td><%= tasks[i].description %></td>
+                                <td><%= formatDate[i] %></td>
                                 <td>
                                     <div class="group-button" style="display: flex;">
                                         <a href="/turn/<%= tasks[i]._id %>" 
